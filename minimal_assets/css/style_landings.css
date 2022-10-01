@@ -1,0 +1,1417 @@
+@font-face {
+    font-family: 'Helvetica-Light';
+    src: url('../fonts/HelveticaNeueLTStd-Lt.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Lt%EF%B9%96.eot#iefix')
+            format('embedded-opentype'),
+        url('../fonts/HelveticaNeueLTStd-Lt.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueLTStd-Lt.woff') format('woff'),
+        url('../fonts/HelveticaNeueLTStd-Lt.ttf') format('truetype'),
+        url('../fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt')
+            format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('../fonts/HelveticaNeueLTStd-Bd.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Bd%EF%B9%96.eot#iefix')
+            format('embedded-opentype'),
+        url('../fonts/HelveticaNeueLTStd-Bd.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueLTStd-Bd.woff') format('woff'),
+        url('../fonts/HelveticaNeueLTStd-Bd.ttf') format('truetype'),
+        url('../fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd')
+            format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica-Thin';
+    src: url('../fonts/HelveticaNeueLTStd-Th.eot');
+    src: url('../fonts/HelveticaNeueLTStd-Th%EF%B9%96.eot#iefix')
+            format('embedded-opentype'),
+        url('../fonts/HelveticaNeueLTStd-Th.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueLTStd-Th.woff') format('woff'),
+        url('../fonts/HelveticaNeueLTStd-Th.ttf') format('truetype'),
+        url('../fonts/HelveticaNeueLTStd-Th.svg#HelveticaNeueLTStd-Th')
+            format('svg');
+    font-style: normal;
+}
+
+.block {
+    display: block !important;
+}
+.none {
+    display: none;
+}
+.flex {
+    display: flex;
+}
+.relative {
+    position: relative;
+}
+.no_margin {
+    margin: 0 !important;
+}
+
+.valign {
+    width: 100%;
+    position: absolute !important;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.transition,
+.transition:hover {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+/* Basic & Layout */
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Helvetica-Light', sans-serif;
+    color: #3b3b3b;
+    background: #fff;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.inner {
+    max-width: 1110px;
+    margin: auto;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+li {
+    line-height: 1.45;
+}
+li:last-child {
+    border: 0 !important;
+}
+li.no_bullet:before {
+    display: none !important;
+}
+strong {
+    font-family: 'Helvetica-Bold';
+}
+img {
+    max-width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: inline-block;
+}
+
+.btn {
+    background: #3331ac;
+    padding: 16px 26px;
+    border-radius: 3px;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    opacity: 1;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    border: 0;
+    border-radius: 30px;
+}
+.btn:hover {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.btn i {
+    margin-right: 8px;
+}
+
+.salud_fem .btn {
+    background: #892683;
+}
+
+.azul {
+    color: #00239b;
+}
+.celeste {
+    color: #0096ff;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3 {
+    color: #143f90;
+    font-size: 40px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 46px;
+    line-height: 1.2;
+    font-family: 'Helvetica-Thin', sans-serif;
+}
+h3 {
+    font-size: 26px;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* -------- HEADER -------- */
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+#logo_rus {
+    width: 250px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    display: block;
+}
+
+/* -------- HERO -------- */
+
+#hero {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 130px 0 110px;
+}
+#hero h2 {
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.salud #hero {
+    background: url('../images/hero_salud.jpg') no-repeat top right;
+    background-size: cover;
+}
+.hogar #hero {
+    background: url('../images/hero_hogar.jpg') no-repeat top right;
+    background-size: cover;
+}
+
+.alquileres #hero {
+    background: url('../images/hero_alquiler_turistico.jpg') no-repeat top right;
+    background-size: cover;
+}
+.hero_iconos.ap #hero {
+    background: url('../images/hero_ap.jpg') no-repeat top right;
+    background-size: cover;
+}
+.hero_iconos.alquiler #hero {
+    background: url('../images/hero_alquiler.jpg') no-repeat top right;
+    background-size: cover;
+}
+.caucion #hero {
+    background: url('../images/hero_hogar.jpg') no-repeat top right;
+    background-size: cover;
+}
+.foodtruck #hero {
+    background: url('../images/hero_foodtruck.jpg') no-repeat top right;
+    background-size: cover;
+}
+.caucion #hero {
+    background: url('../images/hero_hogar.jpg') no-repeat top right;
+    background-size: cover;
+}
+.auto_mas_vida #hero {
+    background: url('../images/hero_auto_mas_vida.jpg') no-repeat top right;
+    background-size: cover;
+}
+.ap_delivery #hero {
+    background: url('../images/hero_ap_delivery.jpg') no-repeat top right;
+    background-size: cover;
+}
+.ap_salud #hero {
+    background: url('../images/hero_ap_salud.jpg') no-repeat top right;
+    background-size: cover;
+}
+
+.salud_fem #hero {
+    padding-top: 180px;
+    padding-bottom: 0;
+    background: url(../images/hero_salud_fem.jpg) no-repeat top right;
+    background-size: cover;
+}
+.salud_fem #hero strong {
+    color: #ff5ad3;
+    font-size: 120px;
+}
+.salud_fem #hero span {
+    font-size: 26px;
+}
+
+#beneficios {
+    background: #892683;
+    padding: 80px 0;
+    text-align: center;
+}
+#beneficios h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+}
+#beneficios ul {
+    max-width: 1000px;
+    margin: auto;
+}
+#beneficios li {
+    display: inline-block;
+    font-size: 21px;
+    font-family: 'Helvetica-Bold', sans-serif;
+    margin-bottom: 30px;
+    color: #fff;
+}
+#beneficios li::before {
+    display: inline-block;
+    content: '';
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    margin: 0 20px;
+    background-color: #44ffcc;
+    position: relative;
+    top: -4px;
+}
+#beneficios li:first-child::before {
+    display: none;
+}
+
+#planes .plan {
+    background: #fff;
+    border-radius: 30px 0 30px 30px;
+    overflow: hidden;
+}
+#planes .plan .header_plan {
+    padding: 28px;
+    background: #00239b;
+    color: #fff;
+    text-align: center;
+}
+#planes .plan .header_plan > span {
+    color: #0096ff;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: block;
+    font-family: 'Helvetica-Bold';
+    letter-spacing: 1.5px;
+}
+#planes .plan .header_plan strong {
+    font-size: 68px;
+}
+#planes .plan .header_plan strong span {
+    font-size: 18px;
+}
+#planes .plan {
+    background: #fff;
+}
+#planes .plan .plan_contenido {
+    padding: 22px 0 30px;
+}
+#planes .plan ul {
+    margin-bottom: 30px;
+}
+#planes .plan li {
+    font-size: 16px;
+    color: #3b3b3b;
+    margin-bottom: 10px;
+}
+#planes .plan li strong {
+    margin-left: 4px;
+}
+#planes .btn {
+    background: #0096ff;
+    padding: 12px 20px;
+    font-size: 16px;
+    position: relative;
+    top: 7px;
+}
+#planes .btn:hover {
+    background: #00c0ff;
+}
+
+.salud #planes .plan li {
+    font-size: 17px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;
+    padding: 20px 0;
+}
+
+.salud_fem #iconos_fem {
+    text-align: center;
+}
+.salud_fem #precio {
+    max-width: 770px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.salud_fem #precio {
+    grid-column-gap: 0;
+}
+.salud_fem #precio > div {
+    align-self: center;
+    position: relative;
+}
+.salud_fem #precio .col_6:first-child:after {
+    content: '';
+    width: 2px;
+    background: #44ffcc;
+    position: absolute;
+    height: 98px;
+    right: 0;
+    top: 10px;
+}
+.salud_fem #precio .col_6:first-child {
+    padding-right: 60px;
+}
+.salud_fem #precio .col_6:last-child {
+    padding-left: 60px;
+}
+
+.salud_fem #hero .btn {
+    width: 100%;
+    background: #fff;
+    color: #872882;
+    font-size: 21px;
+    padding: 20px;
+    border-radius: 50px;
+}
+.salud_fem #hero .btn:hover {
+    background: #44ffcc;
+}
+
+.salud_fem #formulario h2 {
+    color: #892683;
+}
+
+#info_hogar {
+    background: #033ec6;
+    padding-bottom: 90px;
+    color: #fff;
+    text-align: center;
+}
+#info_hogar .inner {
+    max-width: 920px;
+    margin: auto;
+    position: relative;
+    top: -30px;
+}
+#info_hogar h2 {
+    margin-bottom: 50px;
+    color: #fff;
+}
+#info_hogar h2 strong {
+    display: block;
+}
+#info_hogar .grid {
+    padding-top: 50px;
+}
+
+#info_hogar .grid h3 {
+    margin-bottom: 0;
+}
+
+/* Iconos */
+
+.iconos > div {
+    padding: 0 20px;
+    border-left: 1px solid #0096ff;
+    align-self: center;
+}
+.iconos > div:first-child {
+    border: 0;
+}
+.iconos img {
+    max-width: 80%;
+}
+.iconos .img_wrapper {
+    min-height: 80px;
+    margin-bottom: 20px;
+}
+.iconos h3,
+.iconos p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+}
+
+/* ---Accdientes personales --- */
+
+.hero_iconos #hero {
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 110px 30px 110px;
+}
+.hero_iconos .iconos .img_wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    border-radius: 50%;
+    background: #fff;
+}
+.hero_iconos .iconos .img_wrapper img {
+    max-width: 50%;
+}
+.hero_iconos .iconos > div {
+    padding: 0 50px;
+    border-width: 2px;
+}
+.hero_iconos .iconos > div:nth-child(2) img {
+    margin-left: 10px;
+}
+.hero_iconos #hero h2 {
+    margin-bottom: 110px;
+}
+.hero_iconos #hero .btn {
+    background: #0096ff;
+    color: #fff;
+    margin-top: 110px;
+    font-size: 22px;
+    padding: 20px 48px;
+    border-radius: 40px;
+}
+.hero_iconos #hero .btn:hover {
+    background: #00c0ff;
+}
+
+.hero_iconos #faq {
+    padding: 140px 0;
+}
+
+/* ---Alquileres--- */
+
+.alquileres #hero .inner {
+    padding-top: 40px;
+}
+.alquileres #hero h1 {
+    font-size: 62px;
+}
+.alquileres #planes .plan li {
+    margin-bottom: 12px;
+}
+
+/* ---Foodtruck--- */
+
+.foodtruck #hero .inner {
+    padding-top: 40px;
+}
+.foodtruck #planes .plan li {
+    margin-bottom: 12px;
+}
+
+/* --- Auto + Vida ---- */
+
+.auto_mas_vida #hero {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 110px 30px 110px;
+}
+.auto_mas_vida h1 {
+    font-size: 55px;
+}
+.auto_mas_vida #hero h2 {
+    font-size: 28px;
+    margin-bottom: 36px;
+}
+.auto_mas_vida #formulario {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+}
+.auto_mas_vida #formulario .cod_area select {
+    width: calc(62% - 20px);
+}
+.auto_mas_vida #formulario .cod_area input {
+    width: 38%;
+}
+.g-recaptcha {
+    text-align: center;
+    margin-bottom: 26px;
+}
+.g-recaptcha > div {
+    display: inline-block;
+}
+
+#hiddenRecaptcha-error {
+    text-align: center !important;
+    position: relative;
+    top: -14px;
+}
+
+/* ---Accdientes personales Salud --- */
+
+.ap_salud #hero h2 {
+    font-size: 34px;
+}
+
+.declaimer {
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+/* -------- FAQ -------- */
+
+#faq {
+    padding: 100px 0;
+    background: #eee;
+    position: relative;
+}
+#faq .inner > img {
+    width: 38%;
+    right: 0;
+}
+#faq .grid > div {
+    align-self: center;
+}
+#faq h2 {
+    margin-bottom: 40px;
+}
+
+.salud_fem #faq h2 {
+    color: #892683;
+}
+
+#listado_faq > li {
+    border-bottom: 1px solid #ccc;
+    padding: 22px 0;
+}
+#listado_faq > li:first-child {
+    padding-top: 0;
+}
+#listado_faq > li:last-child {
+    border-bottom: 0;
+}
+#listado_faq .accordion {
+    font-size: 16px;
+    font-family: 'Helvetica-Bold', sans-serif;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding-right: 30px;
+    line-height: 24px;
+}
+#listado_faq .accordion.is-open {
+    margin-bottom: 20px;
+}
+#listado_faq .accordion img {
+    width: 16px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#listado_faq .txt {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+#listado_faq .txt p,
+#listado_faq .txt li {
+    font-size: 16px;
+    color: #666;
+    position: relative;
+}
+#listado_faq .txt li {
+    padding-left: 22px;
+}
+#listado_faq .txt li:before {
+    content: url('../images/bullet.png');
+    width: 6px;
+    height: 6px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+#listado_faq .txt ul {
+    list-style: disc !important;
+}
+
+#listado_faq .txt p strong {
+    display: block;
+}
+#listado_faq strong {
+    font-family: 'urw_geometricmedium', sans-serif;
+}
+#listado_faq li li {
+    margin-bottom: 15px;
+}
+#listado_faq .bullets_list strong {
+    display: block;
+}
+
+/* -------- FORMULARIO -------- */
+
+#formulario {
+    padding: 80px 0;
+    text-align: center;
+}
+#formulario h2 {
+    margin-bottom: 10px;
+}
+#formulario p {
+    margin-bottom: 40px;
+}
+
+#formulario form {
+    max-width: 900px;
+    margin: auto;
+}
+#formulario .grid {
+    grid-gap: 26px;
+}
+#formulario .grid .grid {
+    grid-column-gap: 16px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    font-family: 'Helvetica-Light', sans-serif;
+    height: 58px;
+    line-height: 58px;
+    border: 1px solid #ccc;
+    background: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 12px;
+    font-size: 17px;
+}
+textarea {
+    height: 180px;
+    margin-bottom: 30px;
+    resize: none;
+}
+
+input[type='submit'] {
+    width: 195px;
+    height: 58px;
+    cursor: pointer;
+    background: #0096ff;
+    padding: 0 !important;
+}
+select {
+    background: url(../images/arrow.png) no-repeat center right;
+}
+input[type='submit']:hover {
+    background: #00c0ff;
+}
+
+.salud_fem input[type='submit'] {
+    background: #3331ac;
+}
+.salud_fem input[type='submit']:hover {
+    background: #a02c9c;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    width: auto !important;
+    border: 0;
+    height: auto !important;
+    background: none;
+    padding-left: 0;
+    line-height: inherit;
+    min-height: 0;
+    margin-right: 10px;
+}
+input[type='radio'] {
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    appearance: radio;
+}
+input[type='checkbox'] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+}
+label {
+    font-size: 16px;
+}
+
+#formulario .cod_area select {
+    width: 66%;
+    float: left;
+}
+#formulario .cod_area input {
+    width: 30%;
+    float: right;
+}
+
+#formulario label.error {
+    color: #ec4141;
+    text-align: left;
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+}
+#formulario .cod_area label.error {
+    float: right;
+    margin-bottom: 6px;
+}
+
+#formulario .radios {
+    padding: 16px 0;
+    text-align: left;
+    overflow: hidden;
+}
+#formulario .radios > label {
+    float: left;
+    margin-right: 30px;
+    font-size: 18px;
+}
+#formulario .radios div {
+    float: left;
+    margin-right: 30px;
+}
+#formulario .radios div label strong {
+    color: #00239b;
+}
+
+#Plan-error {
+    position: absolute;
+}
+
+/* -------- ORGANISMO DE CONTROL -------- */
+
+#info_organismo {
+    padding: 100px 0;
+}
+#info_organismo .txt p {
+    font-size: 14px;
+}
+#info_organismo #contacto_organismo {
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+#info_organismo #contacto_organismo > div {
+    border-right: 1px solid #ccc;
+    padding: 0 30px;
+    text-align: center;
+}
+#info_organismo #contacto_organismo > div:last-child {
+    border: 0;
+    align-self: center;
+}
+#info_organismo #contacto_organismo strong {
+    display: block;
+}
+#info_organismo #contacto_organismo a {
+    display: block;
+    color: #0096ff;
+}
+
+/* -------- FOOTER -------- */
+
+footer {
+    background: #00239b;
+}
+.salud_fem footer {
+    background: #3331ac;
+}
+footer img {
+    max-width: 160px;
+}
+footer .inner {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+footer .inner .social {
+    justify-self: center;
+}
+footer .inner ul {
+    justify-self: right;
+}
+footer i,
+footer li {
+    display: inline-block;
+    margin: 0 14px;
+    color: #fff;
+}
+footer li a {
+    font-size: 16px;
+    color: #fff;
+}
+
+.salud_fem footer {
+    background: #892683;
+}
+
+/* -------- GRACIAS -------- */
+
+.salud_fem #gracias {
+    background: url('../images/hero_salud_fem.jpg') no-repeat top right;
+    background-size: cover;
+}
+#gracias .inner {
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+#gracias h1 {
+    color: #fff;
+    text-align: center;
+}
+#gracias p {
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+}
+#gracias .btn {
+    margin-top: 20px;
+    color: #fff;
+    background: #0096ff;
+}
+.salud_fem #gracias .btn {
+    margin-top: 20px;
+    color: #892683;
+    background: #fff;
+}
+
+.hogar #gracias {
+    background: url(../images/hero_hogar.jpg) no-repeat top right;
+    background-size: cover;
+}
+
+.salud #gracias {
+    background: url(../images/hero_salud.jpg) no-repeat top right;
+    background-size: cover;
+}
+
+.ap #gracias {
+    background: url(../images/hero_ap.jpg) no-repeat top right;
+    background-size: cover;
+}
+
+.foodtruck #gracias {
+    background: url(../images/hero_foodtruck.jpg) no-repeat top right;
+    background-size: cover;
+}
+
+.alquileres #gracias {
+    background: url(../images/hero_alquiler_turistico.jpg) no-repeat top right;
+    background-size: cover;
+}
+
+.alquiler #gracias {
+    background: url(../images/hero_alquiler.jpg) no-repeat top right;
+    background-size: cover;
+}
+
+.auto_mas_vida #gracias {
+    background: url('../images/hero_auto_mas_vida.jpg') no-repeat top center;
+    background-size: cover;
+}
+.ap_delivery #gracias {
+    background: url('../images/hero_ap_delivery.jpg') no-repeat top center;
+    background-size: cover;
+}
+.ap_salud #gracias {
+    background: url('../images/hero_ap_salud.jpg') no-repeat top center;
+    background-size: cover;
+}
+
+/* -------- SLICK -------- */
+
+.slick-next,
+.slick-prev {
+    z-index: 100;
+}
+.slick-next {
+    right: 20px !important;
+}
+.slick-prev {
+    left: 20px !important;
+}
+.slick-prev::before,
+.slick-next::before {
+    content: '\f061' !important;
+    font-family: 'Font Awesome 5 Free' !important;
+    font-weight: 800;
+}
+.slick-prev::before {
+    content: '\f060' !important;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+.mobile {
+    display: none;
+}
+
+@media screen and (min-width: 1600px) {
+    #faq .inner > img {
+        width: 32%;
+    }
+    .salud_fem #hero {
+        padding-top: 180px;
+        padding-bottom: 0;
+        background: url(../images/hero_salud_fem.jpg) no-repeat center right;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #logo_rus {
+        width: 180px;
+    }
+    #hero {
+        padding: 100px 0 110px;
+    }
+    h1 {
+        font-size: 64px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+
+    .auto_mas_vida textarea {
+        height: 110px;
+    }
+
+    #planes .plan .header_plan {
+        padding: 20px;
+    }
+    #planes .plan .header_plan strong {
+        font-size: 60px;
+    }
+    #planes .plan .header_plan > span {
+        margin-bottom: 10px;
+    }
+    #planes .plan li {
+        margin-bottom: 8px;
+    }
+
+    .salud #planes .plan li {
+        padding: 12px 0;
+        margin: 0 30px;
+        font-size: 16px;
+    }
+    #planes .plan .plan_contenido {
+        padding: 16px 0 30px;
+    }
+    #planes .plan ul {
+        margin-bottom: 16px;
+    }
+
+    #formulario .grid {
+        grid-gap: 20px;
+    }
+    .auto_mas_vida #formulario .grid {
+        grid-gap: 16px;
+    }
+    .auto_mas_vida #formulario .cod_area select {
+        width: calc(62% - 16px);
+    }
+
+    input,
+    select,
+    textarea {
+        height: 42px;
+        line-height: 42px;
+        font-size: 16px;
+    }
+    textarea {
+        height: 150px;
+    }
+
+    .alquileres #hero h2 {
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+    .alquileres #planes .plan .plan_contenido {
+        padding: 22px 0 35px;
+    }
+
+    /* AP */
+    .hero_iconos #hero h2 {
+        margin-bottom: 70px;
+    }
+    .hero_iconos #hero .btn {
+        margin-top: 70px;
+        font-size: 18px;
+        padding: 16px 40px;
+        border-radius: 40px;
+    }
+    .hero_iconos .iconos .img_wrapper {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* Caucion */
+
+    .hero_iconos .iconos .img_wrapper {
+        width: 140px;
+        height: 140px;
+    }
+
+    /* Food Truck */
+
+    .foodtruck #planes .plan .header_plan > span {
+        margin-bottom: 4px;
+    }
+    .foodtruck #hero .inner {
+        padding-top: 0;
+    }
+    .foodtruck #hero h1 {
+        font-size: 60px;
+    }
+    .foodtruck #hero h2 {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+    .foodtruck #planes .plan .header_plan {
+        padding: 16px;
+    }
+    .foodtruck #planes .plan li {
+        margin-bottom: 8px;
+    }
+
+    /* Alquileres Caucion  */
+
+    .alquiler.hero_iconos #hero h1 {
+        font-size: 55px;
+    }
+    .alquiler.hero_iconos #hero h2 {
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+    .alquiler.hero_iconos #hero .btn {
+        margin-top: 60px;
+    }
+
+    /* Alquileres Turisticos  */
+
+    .alquileres #planes .plan .header_plan > span {
+        margin-bottom: 4px;
+    }
+    .alquileres #hero .inner {
+        padding-top: 0;
+    }
+    .alquileres #hero h1 {
+        font-size: 45px !important;
+    }
+    .alquileres #hero h2 {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+    .alquileres #planes .plan .header_plan {
+        padding: 16px;
+    }
+    .alquileres #planes .plan li {
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .inner {
+        max-width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+
+    h1 {
+        font-size: 46px !important;
+    }
+    h2 {
+        font-size: 30px;
+    }
+
+    #hero {
+        padding-top: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #hero h2 {
+        margin-bottom: 34px;
+    }
+
+    #logo_rus {
+        display: block;
+        left: 0;
+        margin: auto;
+        width: 160px;
+    }
+
+    .salud_fem #precio .col_6:first-child,
+    .salud_fem #precio .col_6:last-child {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .salud_fem #precio .col_6:first-child::after {
+        display: none;
+    }
+    .salud_fem #hero {
+        background: url(../images/hero_salud_fem.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    .salud_fem #hero strong {
+        font-size: 90px;
+    }
+    .salud_fem #hero h2 {
+        margin-bottom: 40px;
+    }
+    .salud_fem #hero .btn {
+        width: 90%;
+        line-height: 22px;
+    }
+    .salud_fem #precio {
+        margin-bottom: 60px;
+    }
+    .salud_fem #iconos_fem .mobile {
+        display: inline-block;
+    }
+
+    .hogar #hero {
+        padding-bottom: 96px;
+        background: url('../images/hero_hogar.jpg') no-repeat top center;
+        background-size: cover;
+    }
+    #info_hogar {
+        padding-bottom: 40px;
+    }
+    #info_hogar h2 {
+        margin-bottom: 30px;
+    }
+    #info_hogar h2 strong {
+        display: inline;
+    }
+    #info_hogar br {
+        display: none;
+    }
+    #info_hogar .grid {
+        padding-top: 20px;
+    }
+    .iconos > div {
+        border-left: 0;
+        border-bottom: 1px solid #0096ff;
+        padding: 30px 0 !important;
+    }
+    .iconos > div:first-child {
+        border-bottom: 1px solid #0096ff;
+        padding-top: 0;
+    }
+    .iconos > div:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+    #info_hogar p {
+        font-size: 18px;
+    }
+
+    #beneficios {
+        padding: 60px 0 50px;
+    }
+    #beneficios h2 {
+        margin-bottom: 30px;
+    }
+    #beneficios li {
+        font-family: 'Helvetica-Light', sans-serif;
+        display: block;
+        margin: 0;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 18px;
+    }
+    #beneficios li::before {
+        display: none;
+    }
+
+    #formulario {
+        padding: 50px 0;
+    }
+    #formulario h2 {
+        margin-bottom: 25px;
+    }
+    #formulario p {
+        margin-bottom: 25px;
+    }
+    input,
+    select,
+    textarea {
+        height: 48px;
+        line-height: 48px;
+    }
+    #formulario .grid {
+        display: block;
+    }
+    #formulario fieldset {
+        margin-bottom: 20px;
+    }
+    #formulario .cod_area select {
+        margin-bottom: 20px;
+    }
+    textarea {
+        height: 140px;
+    }
+    #formulario .cod_area select {
+        width: 56%;
+        margin-bottom: 0;
+    }
+    #formulario .cod_area input {
+        width: 40%;
+        margin-bottom: 0;
+    }
+
+    #formulario .radios {
+        padding: 22px 0;
+    }
+    #formulario .radios > label {
+        float: none;
+        display: block;
+        font-family: 'Helvetica-Bold', sans-serif;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    #formulario .radios div {
+        float: none;
+        margin-right: 0;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+    }
+    #formulario .radios div:last-child {
+        border-bottom: 0;
+    }
+
+    #faq {
+        padding: 50px 0 !important;
+    }
+    #faq .inner > img {
+        position: relative !important;
+        width: 100%;
+        grid-column: span 12;
+    }
+    #faq .inner > img {
+        top: 0;
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none;
+    }
+
+    #info_organismo {
+        padding: 40px 0 50px;
+    }
+    #info_organismo #contacto_organismo > div {
+        border-right: 0;
+        border-bottom: 1px solid #ccc;
+        padding: 14px 0;
+    }
+    footer .inner {
+        grid-template-columns: 50% 50%;
+    }
+    footer i {
+        margin: 0 6px;
+    }
+    footer img {
+        max-width: 120px;
+    }
+    footer .inner ul {
+        display: none;
+    }
+    footer .inner .social {
+        justify-self: right;
+    }
+
+    #gracias h1 {
+        font-size: 40px !important;
+    }
+    #gracias p {
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 10px;
+    }
+
+    .hero_iconos #hero {
+        padding: 130px 0 70px;
+        height: auto;
+    }
+    .hero_iconos #hero h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+    .hero_iconos #hero .btn {
+        margin-top: 30px;
+    }
+
+    .hero_iconos.alquiler #hero {
+        background: url('../images/hero_alquiler.jpg') no-repeat top center;
+        background-size: cover;
+    }
+    .foodtruck #hero {
+        background: url('../images/hero_foodtruck.jpg') no-repeat top left;
+        background-size: cover;
+    }
+
+    /* Auto Mas vida */
+
+    .auto_mas_vida #hero {
+        height: auto;
+        padding: 110px 0 40px;
+    }
+    .auto_mas_vida #hero h1 {
+        font-size: 30px !important;
+    }
+    .auto_mas_vida #hero h2 {
+        font-size: 22px !important;
+    }
+    .auto_mas_vida #formulario {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .auto_mas_vida #formulario fieldset:last-child {
+        margin-bottom: 0;
+    }
+}

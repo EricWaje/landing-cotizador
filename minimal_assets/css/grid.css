@@ -1,0 +1,87 @@
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-column-gap: 30px; grid-row-gap: 40px; }
+.row_gap_20 { grid-row-gap: 20px;}
+
+.col_1{ grid-column: span 1; }
+.col_2{ grid-column: span 2; }
+.col_3{ grid-column: span 3; }
+.col_4{ grid-column: span 4; }
+.col_5{ grid-column: span 5; }
+.col_6{ grid-column: span 6; }
+.col_7{ grid-column: span 7; }
+.col_8{ grid-column: span 8; }
+.col_9{ grid-column: span 9; }
+.col_10{ grid-column: span 10; }
+.col_11{ grid-column: span 11; }
+.col_12{ grid-column: span 12; }
+
+.grid_5_col { grid-template-columns: repeat(5, 1fr); }
+
+
+@media screen and (max-width: 1240px) {
+
+.col_in_1{ grid-column: span 1; }
+.col_in_2{ grid-column: span 2; }
+.col_in_3{ grid-column: span 3; }
+.col_in_4{ grid-column: span 4; }
+.col_in_5{ grid-column: span 5; }
+.col_in_6{ grid-column: span 6; }
+.col_in_7{ grid-column: span 7; }
+.col_in_8{ grid-column: span 8; }
+.col_in_9{ grid-column: span 9; }
+.col_in_10{ grid-column: span 10; }
+.col_in_11{ grid-column: span 11; }
+.col_in_12{ grid-column: span 12; }
+
+}
+
+@media screen and (max-width: 768px) {
+	
+	
+	.col_3,
+	.col_2,
+	.col_4,
+	.col_5,
+	.col_6,
+	.col_7,
+	.col_8,
+	.col_9,
+	.col_in_6 { grid-column: span 12; }
+
+
+	.col_tb_1{ grid-column: span 1; }
+	.col_tb_2{ grid-column: span 2; }
+	.col_tb_3{ grid-column: span 3; }
+	.col_tb_4{ grid-column: span 4; }
+	.col_tb_5{ grid-column: span 5; }
+	.col_tb_6{ grid-column: span 6; }
+	.col_tb_7{ grid-column: span 7; }
+	.col_tb_8{ grid-column: span 8; }
+	.col_tb_9{ grid-column: span 9; }
+	.col_tb_10{ grid-column: span 10; }
+	.col_tb_11{ grid-column: span 11; }
+	.col_tb_12{ grid-column: span 12; }
+
+}
+
+@media screen and (max-width: 480px) {
+	.grid > * { grid-column: span 12; }
+	.grid { grid-row-gap: 22px; grid-column-gap: 0; }
+	
+	.col_mb_1{ grid-column: span 1; }
+	.col_mb_2{ grid-column: span 2; }
+	.col_mb_3{ grid-column: span 3; }
+	.col_mb_4{ grid-column: span 4; }
+	.col_mb_5{ grid-column: span 5; }
+	.col_mb_6{ grid-column: span 6; }
+	.col_mb_7{ grid-column: span 7; }
+	.col_mb_8{ grid-column: span 8; }
+	.col_mb_9{ grid-column: span 9; }
+	.col_mb_10{ grid-column: span 10; }
+	.col_mb_11{ grid-column: span 11; }
+	.col_mb_12{ grid-column: span 12; }
+}
+
+.no_gap { grid-gap: 0; }
+
+
+
