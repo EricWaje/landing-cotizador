@@ -574,7 +574,7 @@ html {
     border: 0;
     text-align: center;
     transition: all 0.2s;
-    border-radius: 50px;
+    border-radius: 8px;
     margin: auto;
     margin-bottom: 20px;
     text-decoration: none;

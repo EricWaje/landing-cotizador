@@ -16,7 +16,7 @@
         font-size: 64px;
     }
     #hero_alt .data {
-        max-width: 46%;
+        max-width: 60%;
         left: 5%;
         transform: none;
     }
@@ -319,7 +319,6 @@
     }
     #hero_alt .btn {
         font-size: 16px;
-        background-color: #0057ff;
     }
 
     /*#hero_alt .data.ribbon_png_active {  height: 90vh !important ; }*/
